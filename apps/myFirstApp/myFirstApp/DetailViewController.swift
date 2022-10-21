@@ -12,6 +12,7 @@ class DetailViewController: UIViewController {
     
     @IBOutlet var imageView: UIImageView!
     var imageName: String?
+    var detailImage: (Int, Int)?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +20,7 @@ class DetailViewController: UIViewController {
             imageView.image = UIImage(named: image)
         }
         
-        title = imageName
+        title = "imageName - Picture \(detailImage!.0) of \(detailImage!.1)"
         navigationItem.largeTitleDisplayMode = .never
 
     }
