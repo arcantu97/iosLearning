@@ -18,6 +18,10 @@ class DetailViewController: UIViewController {
         if let image = imageName {
             imageView.image = UIImage(named: image)
         }
+        
+        title = imageName
+        navigationItem.largeTitleDisplayMode = .never
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
